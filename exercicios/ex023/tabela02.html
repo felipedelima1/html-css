@@ -21,9 +21,34 @@
         padding: 10px;
     }
 
+    caption {
+        font-size: 1.5em;
+        font-weight: bold;
+        padding: 10px;
+        background-color: lightgray;
+    }
+
    thead,tfoot {
-        background-color: gray;
+        background-color: #383838;
         color: white;
+    }
+
+    thead > tr > th {
+        position: sticky;
+        top: -1px;
+        background-color: #383838;
+    }
+
+    tbody > tr:nth-child(odd) { /* 2n-1 */
+        background-color: white;
+    }
+
+    tbody > tr:nth-child(even) { /* 2n */
+        background-color: lightgray;
+    }
+
+    td.num {
+        text-align: right;
     }
 </style>
 <body>
@@ -49,6 +74,7 @@
             </th>
         </thead>
         <tbody>
+            <caption>População das Unidades Federativas</caption>
             <tr>
                 <td>São Paulo</td>
                 <td>41 262 199</td>
